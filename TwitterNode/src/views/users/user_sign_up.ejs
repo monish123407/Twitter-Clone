@@ -1,0 +1,114 @@
+<link rel="stylesheet" href="/css/user_signup.css">
+<div class="container h-100">
+  <div class="row h-100">
+      <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
+          <div class="d-table-cell align-middle">
+
+              <div class="text-center mt-4">
+                  <p class="lead">
+                      Sign up to your account to continue
+                  </p>
+              </div>
+
+              <div class="card">
+                  <div class="card-body">
+                      <div class="m-sm-4">
+                          <div class="text-center">
+                              <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Andrew Jones" class="img-fluid rounded-circle" width="132" height="132">
+                          </div>
+                          <form action="/users/create" method="POST">
+                            <div class="form-group">
+                              <label> Your Name </label>
+                              <input class="form-control form-control-lg" type="text" name="name" placeholder="Enter your name" required>
+                          </div>
+                              <div class="form-group">
+                                  <label>Email</label>
+                                  <input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                              <div class="form-group">
+                                  <label>Phone No</label>
+                                  <input class="form-control form-control-lg" type="text" name="phoneno" placeholder="Enter your Phone No" required>
+                              </div>
+                              <div class="form-group">
+                                <label>About </label>
+                                <input class="form-control form-control-lg" type="text" name="about" placeholder="About You">
+                            </div>
+                            <div class="form-group">
+                              <label for="inputCity">City</label>
+                              <input class="form-control form-control-lg"  type="text" name="address1" placeholder="1234 Main Street" >
+                            </div>
+                          <div class="form-group">
+                            <label for="inputCity">City</label>
+                            <input class="form-control form-control-lg"  type="text" name="city" placeholder="City" >
+                          </div>
+                          <div class="form-group">
+                            <label for="inputState">State</label>
+                            <select id="inputState" name="state" class="form-control">
+                              <option selected>Choose...</option>
+                              <option>...</option>
+                              <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                  <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                  <option value="Assam">Assam</option>
+                                  <option value="Bihar">Bihar</option>
+                                  <option value="Chandigarh">Chandigarh</option>
+                                  <option value="Chhattisgarh">Chhattisgarh</option>
+                                  <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                  <option value="Daman and Diu">Daman and Diu</option>
+                                  <option value="Delhi">Delhi</option>
+                                  <option value="Lakshadweep">Lakshadweep</option>
+                                  <option value="Puducherry">Puducherry</option>
+                                  <option value="Goa">Goa</option>
+                                  <option value="Gujarat">Gujarat</option>
+                                  <option value="Haryana">Haryana</option>
+                                  <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                  <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                  <option value="Jharkhand">Jharkhand</option>
+                                  <option value="Karnataka">Karnataka</option>
+                                  <option value="Kerala">Kerala</option>
+                                  <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                  <option value="Maharashtra">Maharashtra</option>
+                                  <option value="Manipur">Manipur</option>
+                                  <option value="Meghalaya">Meghalaya</option>
+                                  <option value="Mizoram">Mizoram</option>
+                                  <option value="Nagaland">Nagaland</option>
+                                  <option value="Odisha">Odisha</option>
+                                  <option value="Punjab">Punjab</option>
+                                  <option value="Rajasthan">Rajasthan</option>
+                                  <option value="Sikkim">Sikkim</option>
+                                  <option value="Tamil Nadu">Tamil Nadu</option>
+                                  <option value="Telangana">Telangana</option>
+                                  <option value="Tripura">Tripura</option>
+                                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                  <option value="Uttarakhand">Uttarakhand</option>
+                                  <option value="West Bengal">West Bengal</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputZip">Zip</label>
+                            <input type="text" name="zip" class="form-control" id="inputZip" placeholder="Enter Your Pin Code">
+                          </div>
+                              <div class="form-group">
+                                  <label>Password</label>
+                                  <input class="form-control form-control-lg" type="password" name="password" placeholder="Enter your Password">
+                              </div>
+                              <div class="form-group">
+                                  <label>Re-Enter Password</label>
+                                  <input class="form-control form-control-lg" type="password" name="confirm_password" placeholder="Enter your password">
+                        
+                              </div>
+                             
+                              <div class="text-center mt-3">
+                                  <input type="submit" class="btn btn-lg btn-primary" value="Sign Up">
+                                  <!-- <button type="submit" class="btn btn-lg btn-primary">Sign in</button> -->
+                                  
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </div>
+</div>

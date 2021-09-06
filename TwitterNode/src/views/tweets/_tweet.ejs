@@ -1,0 +1,61 @@
+<div class="card gedf-card">
+    <div class="card-header">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="mr-2">
+                    <a href="/users/profile/<%= tweet.user.id  %> ">
+                    <img class="rounded-circle" width="45" src="/users/images/<%= tweet.user.avatar %>" alt="">
+                </div>
+                <div class="ml-2">
+                        <div class="h5 m-0"> <%= tweet.user.name %></a></div>                   
+                </div>
+            </div>
+            <div>
+                <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-ellipsis-h"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
+                        <div class="h6 dropdown-header">Configuration</div>
+                        <a class="dropdown-item" href="#">Save</a>
+                        <% if(locals.user && locals.user.id == tweet.user.id) { %>  
+                        <a class="dropdown-item" href="/tweets/destroy/<%= tweet.id  %> ">Delete</a>
+                        <% } %> 
+                        <a class="dropdown-item" href="#">Report</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="card-body">
+        <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>10 min ago</div>
+        <a class="card-link" href="#">
+            <h5 class="card-title"><%= tweet.content %> .</h5>
+        </a>
+        <% if (locals.user) { %>
+            <div id="myDIV">
+            <form action="/comments/create" method="POST">
+                <input type="text" name="content" id="" placeholder="Your comment" required>
+                <input type="hidden" name="tweet" id="" value="<%= tweet._id %>">
+                <input type="submit" class="btn btn-outline-success" name="" id="" value="Add Comment">
+            </form>
+            </div>
+        <% } %> 
+        <p class="card-text">
+            <% for(comment of tweet.comments) { %> 
+            
+                <%- include('../comments/_comment')  %> 
+              
+          <% } %> 
+        </p>
+    </div>
+    <div class="card-footer">
+        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
+        <a href="#" class="card-link"><i class="fa fa-comment"> Comment </i></button>
+        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+    </div>
+</div>
+
+
+
