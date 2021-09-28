@@ -17,7 +17,7 @@ const create = async function(req, res) {
                 if(req.user._id.toString() == tweet.user._id.toString()){                
                 }
                 else{
-                    // newCommentmailer(tweet);
+                    newCommentmailer(tweet);
                     console.log("MailSent");
                 }
                 req.flash('info','Comment Added SuccessFully');
